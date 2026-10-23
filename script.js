@@ -42,7 +42,7 @@ function lightGamesCount(arr, limit) {
     let count = 0;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] <= limit) {
-            count ++;
+            count++;
         }
     }
     return count;
@@ -55,13 +55,13 @@ const popHours = getSum(popGames);
 const lightGames = lightGamesCount(gameHours, 3);
 const lightGamesShare = (lightGames / gameHours.length) * 100;
 
-alert("Общее игровое время за неделю: " + totalHours + " часов. Из них " +popHours+ " часов проведено в самых популярных играх");
+alert("Вы провели " + totalHours + " часов в играх, из них " + popHours + " часов – в самых популярных");
 
 console.log("Всего часов в играх за неделю: ", totalHours);
 console.log("Максимум в одной игре: ", maxHours);
-console.log("Игры с временем более 10 часов: ", popGames);
+console.log("Часы в играх с временем более 10 часов: ", popGames.join(", "));
 console.log("Количество коротких игровых сессий: ", lightGames);
-console.log("Доля коротких игровых сессий: ", lightGamesShare);
+console.log("Доля коротких игровых сессий: ", lightGamesShare + "%");
 
 if (totalHours > 25) {
     console.log("Возможно, стоит сбалансировать время между играми и учёбой");
