@@ -59,7 +59,7 @@ alert("Вы провели " + totalHours + " часов в играх, из н�
 
 console.log("Всего часов в играх за неделю: ", totalHours);
 console.log("Максимум в одной игре: ", maxHours);
-console.log("Часы в играх с временем более 10 часов: ", popGames.join(", "));
+console.log("Часы в играх со временем более 10 часов: ", popGames.join(", "));
 console.log("Количество коротких игровых сессий: ", lightGames);
 console.log("Доля коротких игровых сессий: ", lightGamesShare + "%");
 
