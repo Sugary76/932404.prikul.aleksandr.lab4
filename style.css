@@ -14,7 +14,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: Tahoma, Arial, sans-serif;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -98,6 +98,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 button:hover {
@@ -236,8 +237,8 @@ a:focus {
     border: 1px solid var(--main-color);
     border-radius: 10px;
     padding: 20px;
-    flex: 1 1 180px;
-    max-width: 250px;
+    flex: 0 0 calc((100% - 60px) / 4);
+    max-width: calc((100% - 60px) / 4);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -273,7 +274,7 @@ a:focus {
 .genre-card p {
     font-size: 0.9rem;
     line-height: 1.5;
-    color: #a0a0a0;
+    color: var(--text-color);
 }
 
 .stats-grid {
@@ -311,15 +312,18 @@ a:focus {
 
 @media (max-width: 1024px) {
     .genre-card {
-        flex: 1 1 calc(50% - 20px); 
-        max-width: calc(50% - 20px);
+        flex: 0 0 calc((100% - 20px) / 2); 
+        max-width: calc((100% - 20px) / 2);
+    }
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
     
 }
 
 @media (max-width: 767px) {
     .genre-card {
-        flex: 1 1 100%;
+        flex: 0 0 100%;
         max-width: 100%;
     }
 
